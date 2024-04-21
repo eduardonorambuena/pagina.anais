@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0d1f2; /* Color de fondo morado claro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #6200ea; /* Color morado */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #7c4dff; /* Cambia el color al pasar el cursor */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido</h1>
+        <button class="button" onclick="redirectToWhatsApp('+56940246069')">Enviar mensaje por WhatsApp</button>
+        <button class="button" onclick="redirectToEmail('eduardovclp@gmail.com')">Enviar correo electrónico</button>
+    </div>
+
+    <script>
+        function redirectToWhatsApp(phoneNumber) {
+            window.location.href = 'https://wa.me/' + phoneNumber;
+        }
+
+        function redirectToEmail(emailAddress) {
+            window.location.href = 'mailto:' + emailAddress;
+        }
+    </script>
+</body>
+</html>
